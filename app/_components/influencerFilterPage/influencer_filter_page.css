@@ -1,0 +1,32 @@
+.styledFilterInput{
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    height: 42px;
+}
+
+select {
+    cursor: pointer;
+}
+.styledFilterInput > option {
+    color: black;
+}
+
+
+.styledFilterButton{
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+    height: 42px;
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: #fff;
+}
+
+.styledFilterButton:disabled{
+    background-color: #ccc;
+    cursor: not-allowed;
+}
