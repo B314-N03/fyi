@@ -3,18 +3,18 @@ import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 export default function Header() {
-    const pathaname = usePathname();
+    
     const { data: session } = useSession();
-
     const email = session?.user?.email || "";
     const avatarLetter = email.charAt(0).toUpperCase() || "";
-
+    const pathaname = usePathname();
     if (pathaname === "/") return null;
+
     return (
         <div className="h-20 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex flex-row justify-between items-center px-8 shadow-md">
 
             <div className="flex items-center">
-                <Link href="/influencer" className="text-white text-2xl font-bold tracking-wide">FUI</Link>
+                <Link href="/influencer" className="text-white text-2xl font-bold tracking-wide">fyi</Link>
             </div>
 
             <div className="flex gap-6">
@@ -35,4 +35,5 @@ export default function Header() {
             </div>
         </div>
     );
+
 }

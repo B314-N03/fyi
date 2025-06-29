@@ -1,6 +1,4 @@
 import CredentialsProvider from 'next-auth/providers/credentials'
-import GitHubProvider from 'next-auth/providers/github'
-import GoogleProvider from 'next-auth/providers/google'
 import { prisma } from '@/lib/prisma'
 import bcrypt from 'bcryptjs'
 
@@ -26,27 +24,26 @@ export const authOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials.password) return null
+        if (!credentials?.email || !credentials.password) {
+          throw new Error('Missing email or password.')
+        }
 
         const user = await prisma.user.findUnique({
           where: { email: credentials.email },
         })
 
-        if (!user || !user.password) return null
+        if (!user || !user.password) {
+          throw new Error('No user found with this email.')
+        }
 
         const valid = await bcrypt.compare(credentials.password, user.password)
-        if (!valid) return null
+        if (!valid) {
+          throw new Error('Incorrect password.')
+        }
 
         return { id: user.id, email: user.email }
-      },
-    }),
-    GitHubProvider({
-      clientId: process.env.GITHUB_ID!,
-      clientSecret: process.env.GITHUB_SECRET!,
-    }),
-    GoogleProvider({
-      clientId: process.env.GOOGLE_CLIENT_ID!,
-      clientSecret: process.env.GOOGLE_CLIENT_SECRET!,
+      }
+
     }),
   ],
   pages: {
@@ -60,19 +57,8 @@ export const authOptions = {
       token: import("next-auth/jwt").JWT;
       user?: { id?: string; email?: string | null };
     }) {
-      // For credentials provider, user.id is your DB id
       if (user) {
         token.id = user.id;
-      }
-      // For OAuth providers, fetch user from DB using email
-      if (!token.id && token.email) {
-        const dbUser = await prisma.user.findUnique({
-          where: { email: token.email as string },
-          select: { id: true },
-        });
-        if (dbUser) {
-          token.id = dbUser.id;
-        }
       }
       return token;
     },
