@@ -17,7 +17,8 @@
       "Vegan",
       "Skincare"
     ],
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "avatarImageLink":"https://images.pexels.com/photos/69494/pexels-photo-69494.jpeg"
   },
   {
     "id": "inf_002",
@@ -37,7 +38,8 @@
       "Nutrition",
       "Wellness"
     ],
-    "location": "Munich, Germany"
+    "location": "Munich, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/69212/pexels-photo-69212.jpeg"
   },
   {
     "id": "inf_003",
@@ -57,7 +59,8 @@
       "Zero Waste",
       "DIY"
     ],
-    "location": "Hamburg, Germany"
+    "location": "Hamburg, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/108157/pexels-photo-108157.jpeg"
   },
   {
     "id": "inf_004",
@@ -76,7 +79,8 @@
       "Lifestyle",
       "Home"
     ],
-    "location": "Cologne, Germany"
+    "location": "Cologne, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/109851/pexels-photo-109851.jpeg"
   },
   {
     "id": "inf_005",
@@ -95,7 +99,8 @@
       "Gadgets",
       "Gaming"
     ],
-    "location": "Stuttgart, Germany"
+    "location": "Stuttgart, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/9163/night.jpg"
   },
   {
     "id": "inf_006",
@@ -115,7 +120,9 @@
       "Photography",
       "Adventure"
     ],
-    "location": "Hamburg, Germany"
+    "location": "Hamburg, Germany",
+    "avatarImageLink":"https://images.pexels.com/photos/7051/fashion-woman-girl-forest.jpg"
+
   },
   {
     "id": "inf_007",
@@ -135,7 +142,8 @@
       "Bodybuilding",
       "Motivation"
     ],
-    "location": "Munich, Germany"
+    "location": "Munich, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/11392/pexels-photo-11392.jpeg"
   },
   {
     "id": "inf_008",
@@ -154,7 +162,8 @@
       "Crafts",
       "Upcycling"
     ],
-    "location": "Cologne, Germany"
+    "location": "Cologne, Germany",
+    "avatarImageLink":"https://images.pexels.com/photos/5186/person-woman-coffee-cup.jpg"
   },
   {
     "id": "inf_009",
@@ -174,7 +183,8 @@
       "Software Reviews",
       "Gadgets"
     ],
-    "location": "Frankfurt, Germany"
+    "location": "Frankfurt, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/59552/pexels-photo-59552.png"
   },
   {
     "id": "inf_010",
@@ -195,7 +205,8 @@
       "Adventure",
       "Eco Living"
     ],
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/41539/attractive-beautiful-brunette-cute-41539.jpeg"
   },
   {
     "id": "inf_011",
@@ -214,7 +225,8 @@
       "Culture",
       "Budget Trips"
     ],
-    "location": "Hamburg, Germany"
+    "location": "Hamburg, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/7823/selfie.jpg"
   },
   {
     "id": "inf_012",
@@ -234,7 +246,8 @@
       "Beauty",
       "Lifestyle"
     ],
-    "location": "Munich, Germany"
+    "location": "Munich, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/53000/girl-beautiful-young-face-53000.jpeg"
   },
   {
     "id": "inf_013",
@@ -253,7 +266,8 @@
       "DIY",
       "Woodworking"
     ],
-    "location": "Cologne, Germany"
+    "location": "Cologne, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/59576/pexels-photo-59576.jpeg"
   },
   {
     "id": "inf_014",
@@ -273,7 +287,8 @@
       "Vegan",
       "Nutrition"
     ],
-    "location": "Frankfurt, Germany"
+    "location": "Frankfurt, Germany",
+    "avatarImageLink": "https://www.pexels.com/photo/woman-in-grey-knit-sweater-61100/"
   },
   {
     "id": "inf_015",
@@ -292,7 +307,8 @@
       "Choreography",
       "Fitness"
     ],
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/111738/pexels-photo-111738.jpeg"
   },
   {
     "id": "inf_016",
@@ -312,7 +328,8 @@
       "Vlogs",
       "Cinematography"
     ],
-    "location": "Hamburg, Germany"
+    "location": "Hamburg, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/55789/pexels-photo-55789.jpeg"
   },
   {
     "id": "inf_017",
@@ -331,7 +348,8 @@
       "Esports",
       "Game Reviews"
     ],
-    "location": "Munich, Germany"
+    "location": "Munich, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
   },
   {
     "id": "inf_018",
@@ -351,7 +369,8 @@
       "Self-Care",
       "Productivity"
     ],
-    "location": "Cologne, Germany"
+    "location": "Cologne, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/58463/pexels-photo-58463.jpeg"
   },
   {
     "id": "inf_019",
@@ -371,7 +390,8 @@
       "Songwriting",
       "Live Performances"
     ],
-    "location": "Frankfurt, Germany"
+    "location": "Frankfurt, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/16622/pexels-photo.jpg"
   },
   {
     "id": "inf_020",
@@ -391,6 +411,7 @@
       "Meditation",
       "Yoga"
     ],
-    "location": "Berlin, Germany"
+    "location": "Berlin, Germany",
+    "avatarImageLink": "https://images.pexels.com/photos/66152/pexels-photo-66152.jpeg"
   }
 ]

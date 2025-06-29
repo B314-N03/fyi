@@ -30,3 +30,9 @@ select {
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+.styledDataList > option{
+    cursor: pointer;
+    background-color: #3b82f6;
+    color: #fff
+}

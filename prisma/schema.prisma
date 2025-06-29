@@ -29,6 +29,7 @@ model Influencer {
   topics            String[]
   location          String
   usersWhoFavorited Favorite[]
+  avatarImageLink   String
 }
 
 model Favorite {
