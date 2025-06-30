@@ -60,7 +60,7 @@ export default function InfluencerFilterPage({ influencers, favoriteIds }: Props
             if (filters.minFollowers && i.followers < Number(filters.minFollowers)) return false;
             if (filters.avgLikes && i.avgLikes < Number(filters.avgLikes)) return false;
             if (filters.avgComments && i.avgComments < Number(filters.avgComments)) return false;
-            if (filters.engagementRate && i.followers > Number(filters.engagementRate)) return false;
+            if (filters.engagementRate && i.engagementRate < Number(filters.engagementRate)) return false;
             return true;
         });
     }, [influencers, filters]);
@@ -115,7 +115,7 @@ export default function InfluencerFilterPage({ influencers, favoriteIds }: Props
                         <input name="minFollowers" type="number" placeholder="Min Followers" className="styledFilterInput" value={filters.minFollowers} onChange={handleChange} />
                         <input name="avgLikes" type="number" placeholder="Min Avg Likes" className="styledFilterInput" value={filters.avgLikes} onChange={handleChange} />
                         <input name="avgComments" type="number" placeholder="Min Avg Comments" className="styledFilterInput" value={filters.avgComments} onChange={handleChange} />
-                        <input name="engagementRate" type="number" placeholder="Max Engagement Rate" className="styledFilterInput" value={filters.engagementRate} onChange={handleChange} />
+                        <input name="engagementRate" type="number" placeholder="Min Engagement Rate" className="styledFilterInput" value={filters.engagementRate} onChange={handleChange} />
                     </div>
                 )}
             </form>

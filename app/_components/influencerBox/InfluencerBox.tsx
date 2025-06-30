@@ -7,8 +7,9 @@ import { Heart } from "lucide-react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTiktok, faTwitch, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import Image from "next/image";
+import Link from "next/link";
 
-interface InfluencerBoxProps {
+export interface InfluencerBoxProps {
   id: string;
   name: string;
   gender: string;
@@ -45,7 +46,9 @@ export default function InfluencerBox({
   const [isFavoritedState, setIsFavoritedState] = useState(isFavorited);
   const [animationState, setAnimationState] = useState(isFavorited);
   const router = useRouter();
-  const handleAddToFavorites = async () => {
+  const handleAddToFavorites = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
     let endpoint = "/api/favorites";
     let options: RequestInit;
 
@@ -84,21 +87,22 @@ export default function InfluencerBox({
 
 
   return (
-    <div
+    <Link
+      href={`/influencer/${id}`}
       className="border border-gray-300 rounded-xl p-6 shadow-md hover:shadow-lg transition bg-white hover:scale-102 w-full"
     >
       <div className="flex justify-between mb-4">
         <div className="flex justify-between mb-4 text-gray-600 items-center gap-4">
-            <div className="w-15 h-15 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-lg overflow-hidden">
-              <Image
-                src={avatarImageLink || ""}
-                alt="avatar"
-                width={128}
-                height={128}
-                quality={100}
-                className="object-cover w-full h-full"
-              />
-            </div>
+          <div className="w-15 h-15 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 font-bold text-lg overflow-hidden">
+            <Image
+              src={avatarImageLink || ""}
+              alt="avatar"
+              width={128}
+              height={128}
+              quality={100}
+              className="object-cover w-full h-full"
+            />
+          </div>
           <div className="flex flex-col gap-1">
             <h2 className="text-xl font-semibold">{name}</h2>
             <span className="text-sm text-gray-500">{location}</span>
@@ -123,9 +127,10 @@ export default function InfluencerBox({
         {platform.map((platform) => (
           <span
             key={platform}
-            className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full"
+            className="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded-full flex items-center gap-1"
           >
             {platformIcons[platform] || platform}
+            <span>{platform}</span>
           </span>
         ))}
       </div>
@@ -148,6 +153,6 @@ export default function InfluencerBox({
           </span>
         ))}
       </div>
-    </div>
+    </Link>
   );
 }
